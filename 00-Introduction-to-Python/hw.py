@@ -10,15 +10,8 @@ from collections import Counter
 
 
 def is_permutation(a: str, b: str) -> bool:
-	a = Counter(a)
-	b = Counter(b)
-
-	print(a)
-	print(b)
-	if a == b:
-		return True
-	else:
-		return False
+	a, b = Counter(a), Counter(b)
+	return True if a == b else False
 
 
 assert is_permutation('baba', 'abab')
