@@ -6,9 +6,19 @@
 изменение порядка символов. Регистр учитывается, пробелы 
 являются существенными.
 """
+from collections import Counter
+
 
 def is_permutation(a: str, b: str) -> bool:
-    # Нужно проверить, являются ли строчки 'a' и 'b' перестановками
+	a = Counter(a)
+	b = Counter(b)
+
+	print(a)
+	print(b)
+	if a == b:
+		return True
+	else:
+		return False
 
 
 assert is_permutation('baba', 'abab')
